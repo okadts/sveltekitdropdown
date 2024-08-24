@@ -1,3 +1,80 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  import DropDown from "../component/DropDown.svelte"
+  import type { DropDownOption } from "../component/DropDownHelper.ts"
+  const options: DropDownOption[] = [
+    { label: "Dog", value: 1 },
+    { label: "Bird", value: 2 },
+    { label: "Snake", value: 3 },
+    { label: "Mouse", value: 4 },
+    { label: "Bat", value: 5 },
+  ]
+
+  let modelSingle = options[0]
+  let modelMultiple = [options[0], options[1]]
+
+  function handleOnChangeSingle(value: DropDownOption | DropDownOption[] | undefined) {
+    if (value !== undefined) {
+      modelSingle = value as DropDownOption
+      console.log(value)
+    }
+  }
+
+  function handleOnChangeMultiple(value: DropDownOption | DropDownOption[] | undefined) {
+    if (value !== undefined) {
+      modelMultiple.splice(0, modelMultiple.length)
+      modelMultiple = value as DropDownOption[]
+      console.log(value)
+    }
+  }
+</script>
+
+<h1>DropDown</h1>
+<h5>Single</h5>
+<DropDown
+  options={options}
+  searchable={true}
+  clearable={true}
+  multiple={false}
+  model={modelSingle}
+  onChange={handleOnChangeSingle}
+/>
+<p></p>
+<h5>Multiple</h5>
+<DropDown
+  options={options}
+  searchable={true}
+  clearable={true}
+  multiple={true}
+  model={modelMultiple}
+  onChange={handleOnChangeMultiple}
+/>
+
+<style>
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(58, 57, 57, 0.87);
+    background-color: #ffffff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+  }
+</style>
