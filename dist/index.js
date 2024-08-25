@@ -1,3 +1,3 @@
-import { highlightText } from "../component/DropDownHelper.ts";
-import DropDown from "../component/DropDown.svelte";
+import { highlightText } from "./component/DropDownHelper.js";
+import DropDown from "./component/DropDown.svelte";
 export { highlightText, DropDown };

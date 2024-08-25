@@ -1,6 +1,6 @@
 <script lang="ts">
-  import DropDown from "../component/DropDown.svelte"
-  import type { DropDownOption } from "../component/DropDownHelper.ts"
+  import DropDown from "../lib/component/DropDown.svelte.js"
+  import type { DropDownOption } from "../lib/component/DropDownHelper.ts"
 
   export const prerender = true
 
