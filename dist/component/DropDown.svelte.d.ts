@@ -1,5 +1,5 @@
 import { SvelteComponent } from "svelte";
-import type { DropDownOption } from "./DropDownHelper.ts";
+import type { DropDownOption } from "./DropDownHelper.d.ts";
 declare const __propDef: {
     props: {
         options?: DropDownOption[];

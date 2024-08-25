@@ -1,5 +1,5 @@
 <script>import { onMount } from "svelte";
-import { highlightText } from "./DropDownHelper.ts";
+import { highlightText } from "./DropDownHelper.js";
 export let options = [];
 export let searchable = false;
 export let clearable = false;
