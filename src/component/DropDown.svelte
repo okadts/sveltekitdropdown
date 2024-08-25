@@ -127,8 +127,6 @@
     searchKeyword = target.value || ''
     isSearch = true
   }
-
-  console.log(model)
 </script>
 
 <div
@@ -221,28 +219,24 @@
       {/if}
       <ul>
         {#each listOptions as option, index}
-          <!-- svelte-ignore a11y-click-events-have-key-events -->
-          <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-          <li
-            on:click={() => {
-              handleClickOptions(option)
-            }}
+          <slot name="dropdown-item" option={option} index={index} handleClickOptions={handleClickOptions}>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+            <li
+            on:click={() => handleClickOptions(option)}
             on:mouseenter={() => highlightedListIndex=index}
-            class = {`
-              option 
-              ${isDropDownOptionSelected(option) ? "selected" : "" }
-              ${ index === highlightedListIndex ? "highlighted" : "" }
-            `}
+            class={`option ${isDropDownOptionSelected(option) ? "selected" : ""} ${index === highlightedListIndex ? "highlighted" : ""}`}
             style="
-            --dropdown-option-selected: {optionSelectedColor};
-            --dropdown-option-highlighted: {optionHighlightedColor};"
-          >
-          {#if isSearch}
-            {@html highlightText(option.label, searchKeyword)}
-          {:else}
-            {option.label}
-          {/if}
-          </li>
+              --dropdown-option-selected: {optionSelectedColor};
+              --dropdown-option-highlighted: {optionHighlightedColor};"
+            >
+            {#if isSearch}
+              {@html highlightText(option.label, searchKeyword)}
+            {:else}
+              {option.label}
+            {/if}
+            </li>
+          </slot>
         {/each}
       </ul>
     </div>
