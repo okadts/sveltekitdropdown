@@ -1,5 +1,5 @@
 import { useArgs } from '@storybook/preview-api'
-import { DropDown } from '../lib/index.js' // '@okadts/sveltedropdown'
+import { DropDown } from '@okadts/sveltedropdown'
 import { fn } from '@storybook/test'
 const options = [
   { label: "Dog", value: 1 },

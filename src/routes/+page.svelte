@@ -1,8 +1,6 @@
 <script lang="ts">
-  import DropDown from "../lib/component/DropDown.svelte.js"
+  import DropDown from "../lib/component/DropDown.svelte"
   import type { DropDownOption } from "../lib/component/DropDownHelper.ts"
-
-  export const prerender = true
 
   const options: DropDownOption[] = [
     { label: "Dog", value: 1 },
