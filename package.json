@@ -41,7 +41,7 @@
     "@storybook/test": "^8.2.9",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/adapter-static": "^3.0.4",
-    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/kit": "^2.7.2",
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "publint": "^0.1.9",
