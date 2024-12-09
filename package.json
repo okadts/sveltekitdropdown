@@ -45,7 +45,7 @@
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.1",
     "publint": "^0.2.12",
-    "storybook": "^8.2.9",
+    "storybook": "^8.4.7",
     "svelte": "^5.5.3",
     "svelte-check": "^4.1.1",
     "typescript": "^5.0.0",
