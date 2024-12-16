@@ -48,7 +48,7 @@
     "storybook": "^8.2.9",
     "svelte": "^5.5.3",
     "svelte-check": "^4.1.1",
-    "typescript": "^5.0.0",
+    "typescript": "^5.7.2",
     "vite": "^6.0.1"
   },
   "svelte": "./dist/index.js",
