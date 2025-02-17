@@ -29,7 +29,7 @@
     "svelte": "^4.0.0"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.2",
+    "@chromatic-com/storybook": "^3.2.4",
     "@okadts/sveltedropdown": "github:okadts/sveltekitdropdown",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/addon-interactions": "^8.5.3",
