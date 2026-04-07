@@ -1,5 +1,7 @@
 # Svelte 4 + Sveltekit 2 + TypeScript + Dropdown
 
+If using this repo, please update first
+
 First attemp to create svelte dropdown select component
 
 Component Features:
